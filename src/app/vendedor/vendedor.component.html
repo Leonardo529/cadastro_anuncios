@@ -1,0 +1,97 @@
+<div class="container text-center">
+  <div class="row mt-4">
+    <div class="col-8 m-auto">
+      <form [formGroup]="formGroupClient">
+        <div class="mb-2">
+          <div class="display-6">
+            Anúncios de Carros
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="titulo">Título do Carro</span>
+          <input type="text" id="titulo" formControlName="titulo" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="descricao"> Descrição </span>
+          <input type="descricao" id="descricao" formControlName="descricao" class="form-control"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="preco">Valor </span>
+          <input type="preco" id="preco" formControlName="preco" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="form-check form-check-inline">
+          <div class="">
+            <p>O carro está : </p>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" id="opcao1" value="Disponivel" formControlName="opcaoSelecionada">
+            <label for="opcao1">Disponivel</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" id="opcao2" value="Reservado" formControlName="opcaoSelecionada">
+            <label for="opcao2">Reservado</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" id="opcao3" value="Vendido" formControlName="opcaoSelecionada">
+            <label for="opcao3">Vendido</label>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="validade">Data de compra:</span>
+          <input type="date" id="validade" formControlName="validade" class="form-control"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="image">Imagem</span>
+          <input type="src" id="image" formControlName="image" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="">
+          <input type="checkbox" formControlName="isChecked" (change)="doSomething()"> <label> Deseja compartilhar as informações?</label>
+        </div>
+
+        <div class="mb-3 d-flex justify-content-end">
+          <button class="btn btn-primary me-2" (click)="save ()">Salvar</button>
+          <button class="btn btn-primary" (click)="clean() ">Limpar</button>
+        </div>
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Título</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Preço</th>
+              <th scope="col">Validade</th>
+              <th scope="col">Status </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let vendedor of vendedor ">
+              <th scope="row">{{vendedor.id}}</th>
+              <td>{{vendedor.titulo}}</td>
+              <td>{{vendedor.descricao}}</td>
+              <td>{{vendedor.preco}}</td>
+              <td>{{vendedor.validade}}</td>
+              <td *ngIf="vendedor.opcaoSelecionada">{{vendedor.opcaoSelecionada}}</td>
+
+              <td>
+                <button class="btn btn-primary me-1" (click)="edit(vendedor)">Editar</button>
+                <button class="btn btn-primary" (click)="delete(vendedor)">Excluir</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>

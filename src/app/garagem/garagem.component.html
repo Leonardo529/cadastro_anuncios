@@ -1,0 +1,29 @@
+<div class="container text-center p-5">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let vendedor of vendedor">
+        <div class="card mb-3" style="width: 18rem;">
+          <img [src]="vendedor.image" style="height: 160px;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ vendedor.titulo | titlecase }}</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Preço</th>
+                  <td>{{ vendedor.preco }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Ano</th>
+                  <td>{{ vendedor.validade }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Status</th>
+                  <td *ngIf="vendedor.opcaoSelecionada">{{ vendedor.opcaoSelecionada }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="#" class="btn btn-primary">Saiba mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

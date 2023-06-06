@@ -1,0 +1,36 @@
+{
+  "carros": [
+    {
+      "id": 1,
+      "titulo": "Onix",
+      "preco": "R$52.890",
+      "descricao": "O Chevrolet Onix 2019 1.0 é equipado com motor SPE|4 de 80 cavalos, com torque de 9,8 kgfm, sempre com câmbio manual de 6 marchas. Há também a opção LT 1.4, com 106 cv e 13,9 kgfm de torque",
+      "validade": "2019-07-21",
+      "isChecked": true,
+      "image": "https://quatrorodas.abril.com.br/wp-content/uploads/2018/02/06-e1565788042110.jpg?quality=70&strip=info",
+      "opcaoSelecionada": "Disponivel"
+    },
+
+    {
+      "id": 2,
+      "titulo": "Prisma",
+      "preco": "R$65.390",
+      "descricao": "Esse propulsor da Chevrolet é flex e desenvolve, quando abastecido com etanol, 106 cv de potência a 6.000 rpm e 13,9 kgfm de torque a 4.800 rpm. Com gasolina no tanque, desenvolve 98 cv de potência a 6.000 rpm e 13 kgfm de torque a 4.800 rpm. O modelo chega a 180 km/h de máxima, e é capaz de acelerar de 0 a 100 km/h em 13 segundos, com a transmissão automática de seis marchas.",
+      "validade": "2021-01-09",
+      "isChecked": true,
+      "image": "https://www.comprecar.com.br/storage/news/featured/A9fU2_3GI6DHr16.jpg",
+      "opcaoSelecionada": "Indisponivel"
+    },
+
+    {
+      "id": 3,
+      "titulo": "Palio",
+      "preco": "31.500",
+      "descricao": "O Palio Essence 1.6, que já trazia uma lista de equipamentos de série bem completa, ganha em sua linha 2017 volante em couro comandos do rádio, vidros elétricos traseiros e alarme. Como opcionais traz rodas de liga leve 6.0 x 15",
+      "validade": "2017-12-01",
+      "isChecked": true,
+      "image": "https://quatrorodas.abril.com.br/wp-content/uploads/2016/11/57a23adf0e2163457524a26epalio_sporting_my2017_001.jpeg?quality=70&strip=all",
+      "opcaoSelecionada": "Indisponivel"
+    }
+  ]
+}
